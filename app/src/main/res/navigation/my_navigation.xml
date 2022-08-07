@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="developer.abdulahad.mydictionaryapp.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_dictinaryFragment"
+            app:destination="@id/dictinaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dictinaryFragment"
+        android:name="developer.abdulahad.mydictionaryapp.DictinaryFragment"
+        android:label="fragment_dictinary"
+        tools:layout="@layout/fragment_dictinary" >
+        <action
+            android:id="@+id/action_dictinaryFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_dictinaryFragment_to_categoryFragment2"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideDictionaryFragment"
+        android:name="developer.abdulahad.mydictionaryapp.InsideDictionaryFragment"
+        android:label="fragment_inside_dictionary"
+        tools:layout="@layout/fragment_inside_dictionary" >
+        <action
+            android:id="@+id/action_insideDictionaryFragment_to_dictinaryFragment"
+            app:destination="@id/dictinaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedFragment"
+        android:name="developer.abdulahad.mydictionaryapp.LikedFragment"
+        android:label="fragment_liked"
+        tools:layout="@layout/fragment_liked" >
+        <action
+            android:id="@+id/action_likedFragment_to_dictinaryFragment"
+            app:destination="@id/dictinaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="developer.abdulahad.mydictionaryapp.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_pageSozlarFragment"
+            app:destination="@id/pageSozlarFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_pageKategoryFragment"
+            app:destination="@id/pageKategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageKategoryFragment"
+        android:name="developer.abdulahad.mydictionaryapp.PageKategoryFragment"
+        android:label="fragment_page_kategory"
+        tools:layout="@layout/fragment_page_kategory" >
+    </fragment>
+    <fragment
+        android:id="@+id/pageSozlarFragment"
+        android:name="developer.abdulahad.mydictionaryapp.PageSozlarFragment"
+        android:label="fragment_page_sozlar"
+        tools:layout="@layout/fragment_page_sozlar" >
+        <action
+            android:id="@+id/action_pageSozlarFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_pageSozlarFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="developer.abdulahad.mydictionaryapp.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" >
+    </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="developer.abdulahad.mydictionaryapp.AddWordFragment"
+        android:label="fragment_add_word"
+        tools:layout="@layout/fragment_add_word" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="developer.abdulahad.mydictionaryapp.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/itemPagerInsideFragment"
+        android:name="developer.abdulahad.mydictionaryapp.ItemPagerInsideFragment"
+        android:label="fragment_item_pager_inside"
+        tools:layout="@layout/fragment_item_pager_inside" >
+        <action
+            android:id="@+id/action_itemPagerInsideFragment_to_insideDictionaryFragment"
+            app:destination="@id/insideDictionaryFragment" />
+    </fragment>
+</navigation>
